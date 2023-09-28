@@ -173,6 +173,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ground {
+            get {
+                object obj = ResourceManager.GetObject("ground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap horizontal_long_block {
             get {
                 object obj = ResourceManager.GetObject("horizontal-long-block", resourceCulture);
@@ -223,9 +233,29 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Idle2 {
+            get {
+                object obj = ResourceManager.GetObject("Idle2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jump__32x32_ {
             get {
                 object obj = ResourceManager.GetObject("Jump (32x32)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Off {
+            get {
+                object obj = ResourceManager.GetObject("Off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
