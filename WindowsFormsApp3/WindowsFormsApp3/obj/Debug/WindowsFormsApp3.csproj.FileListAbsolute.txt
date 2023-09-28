@@ -8,3 +8,4 @@ C:\Users\garri\Desktop\Garrigues-Hugo-WFA\WindowsFormsApp3\WindowsFormsApp3\obj\
 C:\Users\garri\Desktop\Garrigues-Hugo-WFA\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
 C:\Users\garri\Desktop\Garrigues-Hugo-WFA\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\garri\Desktop\Garrigues-Hugo-WFA\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\garri\Desktop\Garrigues-Hugo-WFA\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form2.resources

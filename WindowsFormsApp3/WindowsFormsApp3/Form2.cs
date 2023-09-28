@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         bool goLeft, goRight, jumping, isGameOver, canJump;
         int jumpSpeed;
@@ -20,18 +20,16 @@ namespace WindowsFormsApp3
 
 
         int rockheadSpeed = 2;
-        private bool isDescending = true; 
-        private int initialY = 55; 
-        private int finalY = 191; 
+        private bool isDescending = true;
+        private int initialY = 55;
+        private int finalY = 191;
         private int currentY;
-
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
             canJump = true;
             this.DoubleBuffered = true;
         }
-
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
@@ -62,11 +60,11 @@ namespace WindowsFormsApp3
             {
                 if (player.Top + player.Height < this.ClientSize.Height)
                 {
-                    player.Top += 5; 
+                    player.Top += 5;
                 }
                 else
                 {
-                    canJump = true; 
+                    canJump = true;
                 }
             }
             if (goLeft && player.Left > 0)
@@ -98,7 +96,6 @@ namespace WindowsFormsApp3
                     {
                         Controls.Remove(control);
                         score++;
-                        txtScore.Text = "Score : " + score.ToString();
                     }
                 }
             }
@@ -113,7 +110,7 @@ namespace WindowsFormsApp3
                         if (player.Bottom > platform.Top && player.Top < platform.Top)
                         {
                             player.Top = platform.Top - player.Height;
-                            jumpSpeed = 0; 
+                            jumpSpeed = 0;
                             canJump = true;
                         }
                         else if (player.Top < platform.Bottom && player.Bottom > platform.Bottom)
@@ -125,7 +122,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Mouvement rockhead */ 
+            /* Mouvement rockhead */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag is string tag && tag == "rockhead")
@@ -145,7 +142,7 @@ namespace WindowsFormsApp3
                         if (currentY <= initialY)
                         {
                             currentY = initialY;
-                            isDescending = true; 
+                            isDescending = true;
                         }
                     }
                     control.Top = currentY;
@@ -178,20 +175,8 @@ namespace WindowsFormsApp3
                 }
             }
 
-            foreach (Control control in Controls)
-            {
-                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "door")
-                {
-                    if (player.Bounds.IntersectsWith(control.Bounds))
-                    {
-                        GameTimer.Stop();
-                        Form2 form2 = new Form2();
-                        this.Hide();
-                        form2.Show();
-                    }
-                }
-            }
         }
+
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
@@ -206,7 +191,7 @@ namespace WindowsFormsApp3
             if (e.KeyCode == Keys.Space && !jumping && canJump)
             {
                 jumping = true;
-                jumpSpeed = 10; 
+                jumpSpeed = 10;
                 canJump = false;
             }
         }
@@ -225,6 +210,7 @@ namespace WindowsFormsApp3
 
         private void ClosedGame(object sender, FormClosedEventArgs e)
         {
+
         }
     }
 }
