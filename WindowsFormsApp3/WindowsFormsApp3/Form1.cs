@@ -16,7 +16,6 @@ namespace WindowsFormsApp3
         int jumpSpeed;
         int score = 0;
         int playerSpeed = 6;
-        bool onOneWayPlatform = false;
 
 
         int rockheadSpeed = 2;
@@ -88,22 +87,6 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Collision du bas de la platform */
-            foreach (Control control in Controls)
-            {
-                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "platform")
-                {
-                    PictureBox oneWayPlatform = (PictureBox)control;
-                    if (player.Bounds.IntersectsWith(oneWayPlatform.Bounds))
-                    {
-                        onOneWayPlatform = true;
-                    }
-                    else
-                    {
-                        onOneWayPlatform = false;
-                    }
-                }
-            }
             /* Collision du haut de la platform */
             foreach (Control control in Controls)
             {
@@ -118,7 +101,7 @@ namespace WindowsFormsApp3
                             jumpSpeed = 0; 
                             canJump = true;
                         }
-                        else if (player.Top < platform.Bottom && player.Bottom > platform.Bottom && !onOneWayPlatform)
+                        else if (player.Top < platform.Bottom && player.Bottom > platform.Bottom)
                         {
                             player.Top = platform.Bottom;
                             jumpSpeed = 0;
