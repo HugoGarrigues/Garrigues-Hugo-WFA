@@ -34,6 +34,7 @@ namespace WindowsFormsApp3
         private void MainTimerEvent(object sender, EventArgs e)
         {
 
+
             if (jumping)
             {
                 player.Top -= jumpSpeed;
