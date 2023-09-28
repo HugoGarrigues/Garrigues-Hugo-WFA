@@ -121,14 +121,14 @@
   <data name="block-size-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\block-size-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="border-wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\border-wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Idle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Idle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Idle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grass-ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grass-ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2430699-middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2430699-middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grass-ground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grass-ground1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,11 +136,14 @@
   <data name="idle-rock-head" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\idle-rock-head.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vertical-long-block" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vertical-long-block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gray-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gray-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="end-cup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\end-cup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +169,14 @@
   <data name="block-size-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\block-size-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Idle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Idle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grass-ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass-ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="border-wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\border-wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2430699-middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2430699-middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gray-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gray-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-transparent-gold-coin-silver-2d-computer-graphics-coin-gold-coin-gold-piracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-gold-coin-silver-2d-computer-graphics-coin-gold-coin-gold-piracy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,10 +190,10 @@
   <data name="ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vertical-long-block" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vertical-long-block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Idle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Idle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Off1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Off1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
