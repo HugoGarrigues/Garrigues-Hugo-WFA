@@ -157,12 +157,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.border_wall;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 352);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 350);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(564, 15);
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "border";
+            this.pictureBox1.Tag = "floor";
             // 
             // pictureBox2
             // 
@@ -440,6 +440,7 @@
             this.Controls.Add(this.border2);
             this.Controls.Add(this.border);
             this.Controls.Add(this.pictureBox2);
+            this.MaximumSize = new System.Drawing.Size(574, 396);
             this.Name = "Form1";
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.Transparent;

@@ -16,6 +16,7 @@ namespace WindowsFormsApp3
         int jumpSpeed;
         int score = 0;
         int playerSpeed = 6;
+        int borderSize = 15;
 
 
         int rockheadSpeed = 2;
@@ -32,6 +33,18 @@ namespace WindowsFormsApp3
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
+            if (player.Left < borderSize)
+            {
+                player.Left = borderSize;
+            }
+            if (player.Right > ClientSize.Width - borderSize)
+            {
+                player.Left = ClientSize.Width - player.Width - borderSize;
+            }
+            if (player.Top < borderSize)
+            {
+                player.Top = borderSize;
+            }
 
 
             if (jumping)
@@ -143,6 +156,22 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         player.Location = new Point(20, 319);
+                    }
+                }
+            }
+
+
+            foreach (Control control in Controls)
+            {
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "floor")
+                {
+                    PictureBox floor = (PictureBox)control;
+
+                    if (player.Bounds.IntersectsWith(floor.Bounds))
+                    {
+                        player.Top = floor.Top - player.Height;
+                        jumpSpeed = 0;
+                        canJump = true;
                     }
                 }
             }
