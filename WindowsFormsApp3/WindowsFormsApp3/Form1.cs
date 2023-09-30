@@ -12,24 +12,34 @@ namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
+        // Variables Personnages //
         bool goLeft, goRight, jumping, isGameOver, canJump;
         int jumpSpeed;
-        int score = 0;
         int playerSpeed = 6;
+
+        bool isPlayerDead = false;
+
         int borderSize = 15;
+        int score = 0;
 
-
+        // Variables RockHead //
         int rockheadSpeed = 2;
-        private bool isDescending = true; 
-        private int initialY = 55; 
-        private int finalY = 191; 
-        private int currentY;
+        bool isDescending = true;
+        int PositionInitial = 55;
+        int PositionFinal = 191;
+        int PositionActuel;
+
+        Label deathLabel;
+        Label deathLabel2;
 
         public Form1()
         {
             InitializeComponent();
             canJump = true;
             this.DoubleBuffered = true;
+            deathLabel = labelMort;
+            deathLabel2 = labelMort2;
+
         }
 
 
@@ -62,11 +72,11 @@ namespace WindowsFormsApp3
             {
                 if (player.Top + player.Height < this.ClientSize.Height)
                 {
-                    player.Top += 5; 
+                    player.Top += 5;
                 }
                 else
                 {
-                    canJump = true; 
+                    canJump = true;
                 }
             }
             if (goLeft && player.Left > 0)
@@ -85,7 +95,10 @@ namespace WindowsFormsApp3
                 {
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
-                        player.Location = new Point(20, 319);
+                        GameTimer.Stop();
+                        isPlayerDead = true;
+                        deathLabel.Visible = true;
+                        deathLabel2.Visible = true;
                     }
                 }
             }
@@ -113,7 +126,7 @@ namespace WindowsFormsApp3
                         if (player.Bottom > platform.Top && player.Top < platform.Top)
                         {
                             player.Top = platform.Top - player.Height;
-                            jumpSpeed = 0; 
+                            jumpSpeed = 0;
                             canJump = true;
                         }
                         else if (player.Top < platform.Bottom && player.Bottom > platform.Bottom)
@@ -125,30 +138,30 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Mouvement rockhead */ 
+            /* Mouvement rockhead */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag is string tag && tag == "rockhead")
                 {
                     if (isDescending)
                     {
-                        currentY += rockheadSpeed;
-                        if (currentY >= finalY)
+                        PositionActuel += rockheadSpeed;
+                        if (PositionActuel >= PositionFinal)
                         {
-                            currentY = finalY;
+                            PositionActuel = PositionFinal;
                             isDescending = false;
                         }
                     }
                     else
                     {
-                        currentY -= rockheadSpeed;
-                        if (currentY <= initialY)
+                        PositionActuel -= rockheadSpeed;
+                        if (PositionActuel <= PositionInitial)
                         {
-                            currentY = initialY;
-                            isDescending = true; 
+                            PositionActuel = PositionInitial;
+                            isDescending = true;
                         }
                     }
-                    control.Top = currentY;
+                    control.Top = PositionActuel;
                 }
             }
             foreach (Control control in Controls)
@@ -157,7 +170,10 @@ namespace WindowsFormsApp3
                 {
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
-                        player.Location = new Point(20, 319);
+                        GameTimer.Stop();
+                        isPlayerDead = true;
+                        deathLabel.Visible = true;
+                        deathLabel2.Visible = true;
                     }
                 }
             }
@@ -195,19 +211,26 @@ namespace WindowsFormsApp3
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (!isPlayerDead) 
             {
-                goLeft = true;
+                if (e.KeyCode == Keys.Left)
+                {
+                    goLeft = true;
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    goRight = true;
+                }
+                if (e.KeyCode == Keys.Space && !jumping && canJump)
+                {
+                    jumping = true;
+                    jumpSpeed = 10;
+                    canJump = false;
+                }
             }
-            if (e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.R) 
             {
-                goRight = true;
-            }
-            if (e.KeyCode == Keys.Space && !jumping && canJump)
-            {
-                jumping = true;
-                jumpSpeed = 10; 
-                canJump = false;
+                Respawn(); 
             }
         }
 
@@ -221,6 +244,21 @@ namespace WindowsFormsApp3
             {
                 goRight = false;
             }
+        }
+        private void Respawn()
+        {
+            player.Location = new Point(20, 319);
+
+            jumping = false;
+            canJump = true;
+            jumpSpeed = 0;
+
+            GameTimer.Start();
+            isPlayerDead = false;
+
+            deathLabel.Visible = false;
+            deathLabel2.Visible = false;
+
         }
 
         private void ClosedGame(object sender, FormClosedEventArgs e)

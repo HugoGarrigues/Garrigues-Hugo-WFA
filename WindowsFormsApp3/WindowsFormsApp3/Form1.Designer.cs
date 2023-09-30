@@ -58,6 +58,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labelMort = new System.Windows.Forms.Label();
+            this.labelMort2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border2)).BeginInit();
@@ -406,12 +408,42 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "platform";
             // 
+            // labelMort
+            // 
+            this.labelMort.AutoSize = true;
+            this.labelMort.BackColor = System.Drawing.Color.Black;
+            this.labelMort.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMort.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMort.Location = new System.Drawing.Point(143, 160);
+            this.labelMort.Name = "labelMort";
+            this.labelMort.Size = new System.Drawing.Size(287, 42);
+            this.labelMort.TabIndex = 138;
+            this.labelMort.Tag = "labelMort";
+            this.labelMort.Text = "You Are Dead !";
+            this.labelMort.Visible = false;
+            // 
+            // labelMort2
+            // 
+            this.labelMort2.AutoSize = true;
+            this.labelMort2.BackColor = System.Drawing.Color.Black;
+            this.labelMort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMort2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMort2.Location = new System.Drawing.Point(210, 202);
+            this.labelMort2.Name = "labelMort2";
+            this.labelMort2.Size = new System.Drawing.Size(149, 16);
+            this.labelMort2.TabIndex = 139;
+            this.labelMort2.Tag = "labelMort";
+            this.labelMort2.Text = "Press R to respawn !";
+            this.labelMort2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.labelMort2);
+            this.Controls.Add(this.labelMort);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -509,6 +541,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label labelMort;
+        private System.Windows.Forms.Label labelMort2;
     }
 }
 
