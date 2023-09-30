@@ -217,23 +217,25 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::WindowsFormsApp3.Properties.Resources.Idle2;
-            this.pictureBox8.Location = new System.Drawing.Point(79, 317);
+            this.pictureBox8.Location = new System.Drawing.Point(79, 324);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(28, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox8.TabIndex = 62;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "trampoline";
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::WindowsFormsApp3.Properties.Resources.Idle2;
-            this.pictureBox10.Location = new System.Drawing.Point(504, 281);
+            this.pictureBox10.Location = new System.Drawing.Point(505, 283);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox10.TabIndex = 64;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Tag = "trampoline";
             // 
             // pictureBox14
             // 
@@ -433,7 +435,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox29.Location = new System.Drawing.Point(401, 191);
+            this.pictureBox29.Location = new System.Drawing.Point(425, 191);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(12, 14);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -445,7 +447,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox30.Location = new System.Drawing.Point(378, 191);
+            this.pictureBox30.Location = new System.Drawing.Point(402, 191);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(12, 14);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -508,7 +510,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
-            this.pictureBox13.Location = new System.Drawing.Point(317, 211);
+            this.pictureBox13.Location = new System.Drawing.Point(341, 211);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(48, 16);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -519,7 +521,7 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
-            this.pictureBox27.Location = new System.Drawing.Point(365, 211);
+            this.pictureBox27.Location = new System.Drawing.Point(389, 211);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(48, 16);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -530,7 +532,7 @@
             // pictureBox28
             // 
             this.pictureBox28.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
-            this.pictureBox28.Location = new System.Drawing.Point(412, 211);
+            this.pictureBox28.Location = new System.Drawing.Point(436, 211);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(48, 16);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -569,9 +571,7 @@
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.border2);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.border);
@@ -582,6 +582,8 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.saw);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox10);
             this.MaximumSize = new System.Drawing.Size(574, 396);
             this.Name = "Form2";
             this.Text = "Form2";

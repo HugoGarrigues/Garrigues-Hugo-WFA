@@ -39,7 +39,7 @@ namespace WindowsFormsApp3
             this.DoubleBuffered = true;
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
-            this.KeyDown += Form1_KeyDown;
+            this.KeyDown += Form2_KeyDown;
             PositionActuel = PositionInitial;
         }
 
@@ -214,6 +214,18 @@ namespace WindowsFormsApp3
                     }
                 }
             }
+            foreach (Control control in Controls)
+            {
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "trampoline")
+                {
+                    PictureBox trampoline = (PictureBox)control;
+                    if (player.Bounds.IntersectsWith(trampoline.Bounds) && player.Bottom >= trampoline.Top && player.Bottom <= trampoline.Top + playerSpeed)
+                    {
+                        jumpSpeed = 20; 
+                        canJump = false; 
+                    }
+                }
+            }
 
             foreach (Control control in Controls)
             {
@@ -222,9 +234,9 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         GameTimer.Stop();
-                        Form2 form2 = new Form2();
+                        Form3 form3 = new Form3();
                         this.Hide();
-                        form2.Show();
+                        form3.Show();
                     }
                 }
             }
@@ -286,7 +298,7 @@ namespace WindowsFormsApp3
 
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {

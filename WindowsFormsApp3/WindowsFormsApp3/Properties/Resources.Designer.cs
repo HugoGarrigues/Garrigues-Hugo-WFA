@@ -293,6 +293,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Stone_Game_Buttons {
+            get {
+                object obj = ResourceManager.GetObject("Stone_Game_Buttons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vertical_border_wall {
             get {
                 object obj = ResourceManager.GetObject("vertical-border-wall", resourceCulture);
