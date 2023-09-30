@@ -45,7 +45,6 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -66,6 +65,9 @@
             this.labelMort2 = new System.Windows.Forms.Label();
             this.labelMort = new System.Windows.Forms.Label();
             this.txtScore = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border2)).BeginInit();
@@ -81,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
@@ -99,6 +100,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
@@ -263,16 +267,6 @@
             this.pictureBox12.TabIndex = 124;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Tag = "platform";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.grass_ground1;
-            this.pictureBox13.Location = new System.Drawing.Point(304, 211);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(181, 42);
-            this.pictureBox13.TabIndex = 125;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "grass";
             // 
             // pictureBox9
             // 
@@ -511,12 +505,48 @@
             this.txtScore.Tag = "txtScore";
             this.txtScore.Text = "Score : 0";
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
+            this.pictureBox13.Location = new System.Drawing.Point(317, 211);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(48, 16);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox13.TabIndex = 152;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "platform";
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
+            this.pictureBox27.Location = new System.Drawing.Point(365, 211);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(48, 16);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox27.TabIndex = 151;
+            this.pictureBox27.TabStop = false;
+            this.pictureBox27.Tag = "platform";
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
+            this.pictureBox28.Location = new System.Drawing.Point(412, 211);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(48, 16);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox28.TabIndex = 150;
+            this.pictureBox28.TabStop = false;
+            this.pictureBox28.Tag = "platform";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox27);
+            this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.labelMort2);
             this.Controls.Add(this.labelMort);
@@ -536,7 +566,6 @@
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox14);
@@ -573,7 +602,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
@@ -591,6 +619,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,7 +645,6 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
@@ -635,5 +665,8 @@
         private System.Windows.Forms.Label labelMort2;
         private System.Windows.Forms.Label labelMort;
         private System.Windows.Forms.Label txtScore;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
     }
 }

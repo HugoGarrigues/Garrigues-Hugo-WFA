@@ -156,7 +156,7 @@
             this.door.BackColor = System.Drawing.Color.Transparent;
             this.door.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.door;
             this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.door.Location = new System.Drawing.Point(14, 17);
+            this.door.Location = new System.Drawing.Point(53, 293);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(58, 58);
             this.door.TabIndex = 38;

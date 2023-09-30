@@ -193,6 +193,27 @@ namespace WindowsFormsApp3
                     }
                 }
             }
+            foreach (Control control in Controls)
+            {
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "grass")
+                {
+                    PictureBox grass = (PictureBox)control;
+                    if (player.Bounds.IntersectsWith(grass.Bounds) && player.Bottom >= grass.Top && player.Top < grass.Top + playerSpeed)
+                    {
+                        player.Top = grass.Top - player.Height;
+                        jumpSpeed = 0;
+                        canJump = true;
+                    }
+                    else if (player.Bounds.IntersectsWith(grass.Bounds) && player.Right >= grass.Left && player.Right <= grass.Left + playerSpeed)
+                    {
+                        player.Left = grass.Left - player.Width;
+                    }
+                    else if (player.Bounds.IntersectsWith(grass.Bounds) && player.Left <= grass.Right && player.Left >= grass.Right - playerSpeed)
+                    {
+                        player.Left = grass.Right;
+                    }
+                }
+            }
 
             foreach (Control control in Controls)
             {
