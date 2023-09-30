@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static WindowsFormsApp3.Form1;
 
 namespace WindowsFormsApp3
 {
@@ -19,7 +20,6 @@ namespace WindowsFormsApp3
         bool isPlayerDead = false;
 
         int borderSize = 15;
-        int score = 0;
 
         // Variables Saw //
         int sawSpeed = 2;
@@ -39,6 +39,7 @@ namespace WindowsFormsApp3
             deathLabel2 = labelMort2;
             this.KeyDown += Form2_KeyDown;
             PositionActuel = PositionInitial;
+            txtScore.Text = "Score : " + GameData.Score.ToString();
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -108,8 +109,8 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         Controls.Remove(control);
-                        score++;
-                        txtScore.Text = "Score : " + score.ToString();
+                        GameData.Score++;
+                        txtScore.Text = "Score : " + GameData.Score.ToString();
                     }
                 }
             }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
+
     public partial class Form1 : Form
     {
         // Variables Personnages //
@@ -20,7 +21,7 @@ namespace WindowsFormsApp3
         bool isPlayerDead = false;
 
         int borderSize = 15;
-        int score = 0;
+
 
         // Variables RockHead //
         int rockheadSpeed = 2;
@@ -40,8 +41,13 @@ namespace WindowsFormsApp3
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
             this.KeyDown += Form1_KeyDown;
+            GameData.Score = 0;
         }
 
+        public static class GameData
+{
+    public static int Score { get; set; } = 0;
+}
 
         private void MainTimerEvent(object sender, EventArgs e)
         {
@@ -110,8 +116,8 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         Controls.Remove(control);
-                        score++;
-                        txtScore.Text = "Score : " + score.ToString();
+                        GameData.Score++;
+                        txtScore.Text = "Score : " + GameData.Score.ToString();
                     }
                 }
             }
