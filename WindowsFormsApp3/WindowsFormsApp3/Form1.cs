@@ -39,7 +39,7 @@ namespace WindowsFormsApp3
             this.DoubleBuffered = true;
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
-
+            this.KeyDown += Form1_KeyDown;
         }
 
 
@@ -232,6 +232,10 @@ namespace WindowsFormsApp3
             {
                 Respawn(); 
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close(); 
+            }
         }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
@@ -261,8 +265,13 @@ namespace WindowsFormsApp3
 
         }
 
-        private void ClosedGame(object sender, FormClosedEventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close(); 
+            }
         }
+
     }
 }

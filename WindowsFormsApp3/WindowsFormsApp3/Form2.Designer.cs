@@ -62,7 +62,10 @@
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.saw = new System.Windows.Forms.PictureBox();
+            this.labelMort2 = new System.Windows.Forms.Label();
+            this.labelMort = new System.Windows.Forms.Label();
+            this.txtScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border2)).BeginInit();
@@ -95,7 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saw)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
@@ -364,7 +367,7 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox21.Location = new System.Drawing.Point(165, 191);
+            this.pictureBox21.Location = new System.Drawing.Point(165, 192);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(12, 14);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -376,7 +379,7 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox22.Location = new System.Drawing.Point(190, 191);
+            this.pictureBox22.Location = new System.Drawing.Point(190, 192);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(12, 14);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -388,7 +391,7 @@
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox23.Location = new System.Drawing.Point(213, 191);
+            this.pictureBox23.Location = new System.Drawing.Point(213, 192);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(12, 14);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -412,7 +415,7 @@
             // 
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox25.Location = new System.Drawing.Point(401, 281);
+            this.pictureBox25.Location = new System.Drawing.Point(401, 285);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(12, 14);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -424,7 +427,7 @@
             // 
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox26.Location = new System.Drawing.Point(378, 281);
+            this.pictureBox26.Location = new System.Drawing.Point(378, 285);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(12, 14);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -436,7 +439,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox29.Location = new System.Drawing.Point(401, 187);
+            this.pictureBox29.Location = new System.Drawing.Point(401, 191);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(12, 14);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -448,7 +451,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox30.Location = new System.Drawing.Point(378, 187);
+            this.pictureBox30.Location = new System.Drawing.Point(378, 191);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(12, 14);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -456,16 +459,57 @@
             this.pictureBox30.TabStop = false;
             this.pictureBox30.Tag = "apple";
             // 
-            // pictureBox27
+            // saw
             // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Image = global::WindowsFormsApp3.Properties.Resources.Off;
-            this.pictureBox27.Location = new System.Drawing.Point(295, 94);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox27.TabIndex = 146;
-            this.pictureBox27.TabStop = false;
+            this.saw.BackColor = System.Drawing.Color.Transparent;
+            this.saw.Image = global::WindowsFormsApp3.Properties.Resources.Off;
+            this.saw.Location = new System.Drawing.Point(447, 94);
+            this.saw.Name = "saw";
+            this.saw.Size = new System.Drawing.Size(38, 38);
+            this.saw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.saw.TabIndex = 146;
+            this.saw.TabStop = false;
+            this.saw.Tag = "saw";
+            // 
+            // labelMort2
+            // 
+            this.labelMort2.AutoSize = true;
+            this.labelMort2.BackColor = System.Drawing.Color.Black;
+            this.labelMort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMort2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMort2.Location = new System.Drawing.Point(203, 191);
+            this.labelMort2.Name = "labelMort2";
+            this.labelMort2.Size = new System.Drawing.Size(149, 16);
+            this.labelMort2.TabIndex = 148;
+            this.labelMort2.Tag = "labelMort";
+            this.labelMort2.Text = "Press R to respawn !";
+            this.labelMort2.Visible = false;
+            // 
+            // labelMort
+            // 
+            this.labelMort.AutoSize = true;
+            this.labelMort.BackColor = System.Drawing.Color.Black;
+            this.labelMort.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMort.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelMort.Location = new System.Drawing.Point(136, 149);
+            this.labelMort.Name = "labelMort";
+            this.labelMort.Size = new System.Drawing.Size(287, 42);
+            this.labelMort.TabIndex = 147;
+            this.labelMort.Tag = "labelMort";
+            this.labelMort.Text = "You Are Dead !";
+            this.labelMort.Visible = false;
+            // 
+            // txtScore
+            // 
+            this.txtScore.AutoSize = true;
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Location = new System.Drawing.Point(242, 11);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(72, 20);
+            this.txtScore.TabIndex = 149;
+            this.txtScore.Tag = "txtScore";
+            this.txtScore.Text = "Score : 0";
             // 
             // Form2
             // 
@@ -473,6 +517,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.txtScore);
+            this.Controls.Add(this.labelMort2);
+            this.Controls.Add(this.labelMort);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox25);
@@ -505,11 +552,10 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox27);
+            this.Controls.Add(this.saw);
             this.MaximumSize = new System.Drawing.Size(574, 396);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClosedGame);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -544,7 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saw)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,6 +631,9 @@
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
-        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox saw;
+        private System.Windows.Forms.Label labelMort2;
+        private System.Windows.Forms.Label labelMort;
+        private System.Windows.Forms.Label txtScore;
     }
 }

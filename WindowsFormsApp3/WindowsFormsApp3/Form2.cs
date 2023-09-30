@@ -14,21 +14,33 @@ namespace WindowsFormsApp3
     {
         bool goLeft, goRight, jumping, isGameOver, canJump;
         int jumpSpeed;
-        int score = 0;
         int playerSpeed = 6;
+
+        bool isPlayerDead = false;
+
         int borderSize = 15;
+        int score = 0;
+
+        // Variables Saw //
+        int sawSpeed = 2;
+        bool deplacement = true;
+        int PositionInitial = 296;
+        int PositionFinal = 447;
+        int PositionActuel;
+
+        Label deathLabel;
+        Label deathLabel2;
 
 
-        int rockheadSpeed = 2;
-        private bool isDescending = true;
-        private int initialY = 55;
-        private int finalY = 191;
-        private int currentY;
         public Form2()
         {
             InitializeComponent();
             canJump = true;
             this.DoubleBuffered = true;
+            deathLabel = labelMort;
+            deathLabel2 = labelMort2;
+            this.KeyDown += Form1_KeyDown;
+            PositionActuel = PositionInitial;
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -83,7 +95,10 @@ namespace WindowsFormsApp3
                 {
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
-                        player.Location = new Point(20, 319);
+                        GameTimer.Stop();
+                        isPlayerDead = true;
+                        deathLabel.Visible = true;
+                        deathLabel2.Visible = true;
                     }
                 }
             }
@@ -96,6 +111,7 @@ namespace WindowsFormsApp3
                     {
                         Controls.Remove(control);
                         score++;
+                        txtScore.Text = "Score : " + score.ToString();
                     }
                 }
             }
@@ -122,39 +138,42 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Mouvement rockhead */
+            /* Mouvement saw */
             foreach (Control control in Controls)
             {
-                if (control is PictureBox && control.Tag is string tag && tag == "rockhead")
+                if (control is PictureBox && control.Tag is string tag && tag == "saw")
                 {
-                    if (isDescending)
+                    if (deplacement)
                     {
-                        currentY += rockheadSpeed;
-                        if (currentY >= finalY)
+                        PositionActuel += sawSpeed;
+                        if (PositionActuel >= PositionFinal)
                         {
-                            currentY = finalY;
-                            isDescending = false;
+                            PositionActuel = PositionFinal;
+                            deplacement = false;
                         }
                     }
                     else
                     {
-                        currentY -= rockheadSpeed;
-                        if (currentY <= initialY)
+                        PositionActuel -= sawSpeed;
+                        if (PositionActuel <= PositionInitial)
                         {
-                            currentY = initialY;
-                            isDescending = true;
+                            PositionActuel = PositionInitial;
+                            deplacement = true;
                         }
                     }
-                    control.Top = currentY;
+                    control.Left = PositionActuel; 
                 }
             }
             foreach (Control control in Controls)
             {
-                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "rockhead")
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "saw")
                 {
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
-                        player.Location = new Point(20, 319);
+                        GameTimer.Stop();
+                        isPlayerDead = true;
+                        deathLabel.Visible = true;
+                        deathLabel2.Visible = true;
                     }
                 }
             }
@@ -175,24 +194,47 @@ namespace WindowsFormsApp3
                 }
             }
 
+            foreach (Control control in Controls)
+            {
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "door")
+                {
+                    if (player.Bounds.IntersectsWith(control.Bounds))
+                    {
+                        GameTimer.Stop();
+                        Form2 form2 = new Form2();
+                        this.Hide();
+                        form2.Show();
+                    }
+                }
+            }
         }
-
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (!isPlayerDead)
             {
-                goLeft = true;
+                if (e.KeyCode == Keys.Left)
+                {
+                    goLeft = true;
+                }
+                if (e.KeyCode == Keys.Right)
+                {
+                    goRight = true;
+                }
+                if (e.KeyCode == Keys.Space && !jumping && canJump)
+                {
+                    jumping = true;
+                    jumpSpeed = 10;
+                    canJump = false;
+                }
             }
-            if (e.KeyCode == Keys.Right)
+            else if (e.KeyCode == Keys.R)
             {
-                goRight = true;
+                Respawn();
             }
-            if (e.KeyCode == Keys.Space && !jumping && canJump)
+            if (e.KeyCode == Keys.Escape)
             {
-                jumping = true;
-                jumpSpeed = 10;
-                canJump = false;
+                this.Close();
             }
         }
 
@@ -207,10 +249,28 @@ namespace WindowsFormsApp3
                 goRight = false;
             }
         }
-
-        private void ClosedGame(object sender, FormClosedEventArgs e)
+        private void Respawn()
         {
+            player.Location = new Point(20, 319);
 
+            jumping = false;
+            canJump = true;
+            jumpSpeed = 0;
+
+            GameTimer.Start();
+            isPlayerDead = false;
+
+            deathLabel.Visible = false;
+            deathLabel2.Visible = false;
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }
