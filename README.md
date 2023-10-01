@@ -1,8 +1,6 @@
 # Garrigues-Hugo-WFA
 
-# RetroPixel
-
-## Le Projet :
+## RetroPixel :
 
 Ce projet RetroPixel a été réalisé suite a la demande d'un jeu a réalisé. Nous avons le choix libre sur le thême du jeu je me suis donc dirigé vers un jeu de type plateformer.
 Le but final est donc de réaliser ce jeu en respectant les consignes données sur moodle. 
@@ -24,7 +22,8 @@ Vous retrouverez donc sur ce plateformer un même personnage qui traversera 3 ni
 - Début du code en suivant les tutos trouvés
 - Apprentissage de WFA
 ### 23/09 ==> 24/09 :
--------------------
+
+
 ### 25/09 :
 - Début du vrai Projet
 - Téléchargement du pack d'assets final
@@ -48,7 +47,8 @@ Vous retrouverez donc sur ce plateformer un même personnage qui traversera 3 ni
 - Esthetique du 3ème niveau
 
 ### 29/09 :
--------------------
+
+
 ### 30/09 ==> 31/09 :
 - Gestion de la fonction respawn
 - Gestion de la mort du player
@@ -58,9 +58,12 @@ Vous retrouverez donc sur ce plateformer un même personnage qui traversera 3 ni
 - Actualisation du score entre niveaux
   
 ### 1/10 :
--
--
--
+- Finition Readme.MD
+- Création du form de fin
+- Ajout d'un form avec un tutoriel
+- Niveau 3 fini
+- Niveau 4 fini
+- Commentaires du code
 
 ## Démarrage : 
 
