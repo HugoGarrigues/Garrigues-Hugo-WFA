@@ -17,6 +17,17 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             finalScore.Text = GameData.Score.ToString();
+            finalMort.Text = GameData.Mort.ToString();
+            this.KeyDown += Form_KeyDown;
+        }
+
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

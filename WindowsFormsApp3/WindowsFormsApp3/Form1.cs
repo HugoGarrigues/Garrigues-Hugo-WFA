@@ -14,14 +14,15 @@ namespace WindowsFormsApp3
     public partial class Form1 : Form
     {
         // Variables Personnages //
-        bool goLeft, goRight, jumping, isGameOver, canJump;
+        bool goLeft, goRight, jumping, canJump;
         int jumpSpeed;
         int playerSpeed = 6;
-
         bool isPlayerDead = false;
-
+        
+        // Variables Autres
         int borderSize = 15;
-
+        Label deathLabel;
+        Label deathLabel2;
 
         // Variables RockHead //
         int rockheadSpeed = 2;
@@ -30,9 +31,6 @@ namespace WindowsFormsApp3
         int PositionFinal = 191;
         int PositionActuel;
 
-        Label deathLabel;
-        Label deathLabel2;
-
         public Form1()
         {
             InitializeComponent();
@@ -40,13 +38,15 @@ namespace WindowsFormsApp3
             this.DoubleBuffered = true;
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
-            this.KeyDown += Form1_KeyDown;
+            this.KeyDown += Form_KeyDown;
             GameData.Score = 0;
+            GameData.Mort = 0;
         }
 
         public static class GameData
 {
     public static int Score { get; set; } = 0;
+            public static int Mort { get; set; } = 0;
 }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -269,9 +269,10 @@ namespace WindowsFormsApp3
             deathLabel.Visible = false;
             deathLabel2.Visible = false;
 
+            GameData.Mort++;
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {

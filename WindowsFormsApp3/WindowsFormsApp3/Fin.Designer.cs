@@ -51,6 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.finalScore = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.finalMort = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.border)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox11
@@ -322,12 +325,39 @@
             this.finalScore.TabIndex = 168;
             this.finalScore.Tag = "finalScore";
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.skull;
+            this.pictureBox13.Location = new System.Drawing.Point(299, 269);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(27, 33);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 169;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "";
+            // 
+            // finalMort
+            // 
+            this.finalMort.AutoSize = true;
+            this.finalMort.BackColor = System.Drawing.Color.Transparent;
+            this.finalMort.Font = new System.Drawing.Font("Showcard Gothic", 27.75F);
+            this.finalMort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.finalMort.Location = new System.Drawing.Point(243, 261);
+            this.finalMort.Name = "finalMort";
+            this.finalMort.Size = new System.Drawing.Size(0, 46);
+            this.finalMort.TabIndex = 170;
+            this.finalMort.Tag = "finalMort";
+            // 
             // Fin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.finalMort);
+            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.finalScore);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox11);
@@ -373,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.border)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +434,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label finalScore;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label finalMort;
     }
 }

@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
         public Info()
         {
             InitializeComponent();
+            this.KeyDown += Form_KeyDown;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -22,6 +23,14 @@ namespace WindowsFormsApp3
             Menu menu = new Menu();
             this.Hide();
             menu.Show();
+        }
+        
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

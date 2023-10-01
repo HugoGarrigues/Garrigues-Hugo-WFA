@@ -62,12 +62,12 @@
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.saw = new System.Windows.Forms.PictureBox();
-            this.labelMort2 = new System.Windows.Forms.Label();
-            this.labelMort = new System.Windows.Forms.Label();
-            this.txtScore = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.txtScore = new System.Windows.Forms.Label();
+            this.labelMort = new System.Windows.Forms.Label();
+            this.labelMort2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border2)).BeginInit();
@@ -467,46 +467,6 @@
             this.saw.TabStop = false;
             this.saw.Tag = "saw";
             // 
-            // labelMort2
-            // 
-            this.labelMort2.AutoSize = true;
-            this.labelMort2.BackColor = System.Drawing.Color.Black;
-            this.labelMort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMort2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMort2.Location = new System.Drawing.Point(203, 191);
-            this.labelMort2.Name = "labelMort2";
-            this.labelMort2.Size = new System.Drawing.Size(149, 16);
-            this.labelMort2.TabIndex = 148;
-            this.labelMort2.Tag = "labelMort";
-            this.labelMort2.Text = "Press R to respawn !";
-            this.labelMort2.Visible = false;
-            // 
-            // labelMort
-            // 
-            this.labelMort.AutoSize = true;
-            this.labelMort.BackColor = System.Drawing.Color.Black;
-            this.labelMort.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMort.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMort.Location = new System.Drawing.Point(136, 149);
-            this.labelMort.Name = "labelMort";
-            this.labelMort.Size = new System.Drawing.Size(287, 42);
-            this.labelMort.TabIndex = 147;
-            this.labelMort.Tag = "labelMort";
-            this.labelMort.Text = "You Are Dead !";
-            this.labelMort.Visible = false;
-            // 
-            // txtScore
-            // 
-            this.txtScore.AutoSize = true;
-            this.txtScore.BackColor = System.Drawing.Color.Transparent;
-            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(242, 11);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(72, 20);
-            this.txtScore.TabIndex = 149;
-            this.txtScore.Tag = "txtScore";
-            this.txtScore.Text = "Score : 0";
-            // 
             // pictureBox13
             // 
             this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
@@ -540,18 +500,59 @@
             this.pictureBox28.TabStop = false;
             this.pictureBox28.Tag = "platform";
             // 
+            // txtScore
+            // 
+            this.txtScore.AutoSize = true;
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.txtScore.Location = new System.Drawing.Point(243, 10);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(80, 20);
+            this.txtScore.TabIndex = 153;
+            this.txtScore.Tag = "txtScore";
+            this.txtScore.Text = "Score : 0";
+            // 
+            // labelMort
+            // 
+            this.labelMort.AutoSize = true;
+            this.labelMort.BackColor = System.Drawing.Color.Black;
+            this.labelMort.Font = new System.Drawing.Font("Showcard Gothic", 28F);
+            this.labelMort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.labelMort.Location = new System.Drawing.Point(124, 146);
+            this.labelMort.Name = "labelMort";
+            this.labelMort.Size = new System.Drawing.Size(310, 47);
+            this.labelMort.TabIndex = 173;
+            this.labelMort.Tag = "labelMort";
+            this.labelMort.Text = "You Are Dead !";
+            this.labelMort.Visible = false;
+            // 
+            // labelMort2
+            // 
+            this.labelMort2.AutoSize = true;
+            this.labelMort2.BackColor = System.Drawing.Color.Black;
+            this.labelMort2.Font = new System.Drawing.Font("Showcard Gothic", 10F);
+            this.labelMort2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.labelMort2.Location = new System.Drawing.Point(192, 193);
+            this.labelMort2.Name = "labelMort2";
+            this.labelMort2.Size = new System.Drawing.Size(165, 18);
+            this.labelMort2.TabIndex = 174;
+            this.labelMort2.Tag = "labelMort";
+            this.labelMort2.Text = "Press R to respawn !";
+            this.labelMort2.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.labelMort);
+            this.Controls.Add(this.labelMort2);
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.txtScore);
-            this.Controls.Add(this.labelMort2);
-            this.Controls.Add(this.labelMort);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox25);
@@ -664,11 +665,11 @@
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox saw;
-        private System.Windows.Forms.Label labelMort2;
-        private System.Windows.Forms.Label labelMort;
-        private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.Label txtScore;
+        private System.Windows.Forms.Label labelMort;
+        private System.Windows.Forms.Label labelMort2;
     }
 }

@@ -133,6 +133,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crane {
+            get {
+                object obj = ResourceManager.GetObject("crane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap door {
             get {
                 object obj = ResourceManager.GetObject("door", resourceCulture);
@@ -306,6 +316,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap png_transparent_gold_coin_silver_2d_computer_graphics_coin_gold_coin_gold_piracy {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-gold-coin-silver-2d-computer-graphics-coin-gold-coin-gold-piracy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skull {
+            get {
+                object obj = ResourceManager.GetObject("skull", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

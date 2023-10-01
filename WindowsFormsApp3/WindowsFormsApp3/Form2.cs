@@ -13,7 +13,7 @@ namespace WindowsFormsApp3
 {
     public partial class Form2 : Form
     {
-        bool goLeft, goRight, jumping, isGameOver, canJump;
+        bool goLeft, goRight, jumping, canJump;
         int jumpSpeed;
         int playerSpeed = 6;
 
@@ -39,7 +39,7 @@ namespace WindowsFormsApp3
             this.DoubleBuffered = true;
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
-            this.KeyDown += Form2_KeyDown;
+            this.KeyDown += Form_KeyDown;
             PositionActuel = PositionInitial;
             txtScore.Text = "Score : " + GameData.Score.ToString();
         }
@@ -298,9 +298,11 @@ namespace WindowsFormsApp3
             deathLabel.Visible = false;
             deathLabel2.Visible = false;
 
+            GameData.Mort++;
+
         }
 
-        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {

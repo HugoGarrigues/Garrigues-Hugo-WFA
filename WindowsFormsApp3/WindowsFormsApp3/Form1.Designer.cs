@@ -41,7 +41,6 @@
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.txtScore = new System.Windows.Forms.Label();
             this.player = new System.Windows.Forms.PictureBox();
             this.rockhead = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
@@ -58,6 +57,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtScore = new System.Windows.Forms.Label();
             this.labelMort = new System.Windows.Forms.Label();
             this.labelMort2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -215,18 +215,6 @@
             this.pictureBox17.TabIndex = 102;
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Tag = "apple";
-            // 
-            // txtScore
-            // 
-            this.txtScore.AutoSize = true;
-            this.txtScore.BackColor = System.Drawing.Color.Transparent;
-            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(240, 9);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(72, 20);
-            this.txtScore.TabIndex = 114;
-            this.txtScore.Tag = "txtScore";
-            this.txtScore.Text = "Score : 0";
             // 
             // player
             // 
@@ -408,16 +396,29 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "platform";
             // 
+            // txtScore
+            // 
+            this.txtScore.AutoSize = true;
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.txtScore.Location = new System.Drawing.Point(241, 9);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(80, 20);
+            this.txtScore.TabIndex = 151;
+            this.txtScore.Tag = "txtScore";
+            this.txtScore.Text = "Score : 0";
+            // 
             // labelMort
             // 
             this.labelMort.AutoSize = true;
             this.labelMort.BackColor = System.Drawing.Color.Black;
-            this.labelMort.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMort.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMort.Location = new System.Drawing.Point(143, 160);
+            this.labelMort.Font = new System.Drawing.Font("Showcard Gothic", 28F);
+            this.labelMort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.labelMort.Location = new System.Drawing.Point(124, 146);
             this.labelMort.Name = "labelMort";
-            this.labelMort.Size = new System.Drawing.Size(287, 42);
-            this.labelMort.TabIndex = 138;
+            this.labelMort.Size = new System.Drawing.Size(310, 47);
+            this.labelMort.TabIndex = 173;
             this.labelMort.Tag = "labelMort";
             this.labelMort.Text = "You Are Dead !";
             this.labelMort.Visible = false;
@@ -426,12 +427,12 @@
             // 
             this.labelMort2.AutoSize = true;
             this.labelMort2.BackColor = System.Drawing.Color.Black;
-            this.labelMort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMort2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelMort2.Location = new System.Drawing.Point(210, 202);
+            this.labelMort2.Font = new System.Drawing.Font("Showcard Gothic", 10F);
+            this.labelMort2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
+            this.labelMort2.Location = new System.Drawing.Point(192, 193);
             this.labelMort2.Name = "labelMort2";
-            this.labelMort2.Size = new System.Drawing.Size(149, 16);
-            this.labelMort2.TabIndex = 139;
+            this.labelMort2.Size = new System.Drawing.Size(165, 18);
+            this.labelMort2.TabIndex = 174;
             this.labelMort2.Tag = "labelMort";
             this.labelMort2.Text = "Press R to respawn !";
             this.labelMort2.Visible = false;
@@ -442,8 +443,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
-            this.Controls.Add(this.labelMort2);
             this.Controls.Add(this.labelMort);
+            this.Controls.Add(this.labelMort2);
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -460,7 +462,6 @@
             this.Controls.Add(this.pictureBox38);
             this.Controls.Add(this.rockhead);
             this.Controls.Add(this.player);
-            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox21);
@@ -523,7 +524,6 @@
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox rockhead;
         private System.Windows.Forms.PictureBox pictureBox38;
@@ -540,6 +540,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Label labelMort;
         private System.Windows.Forms.Label labelMort2;
     }

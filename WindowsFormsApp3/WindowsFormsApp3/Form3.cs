@@ -13,7 +13,7 @@ namespace WindowsFormsApp3
 {
     public partial class Form3 : Form
     {
-        bool goLeft, goRight, jumping, isGameOver, canJump;
+        bool goLeft, goRight, jumping, canJump;
         int jumpSpeed;
         int playerSpeed = 6;
 
@@ -22,10 +22,10 @@ namespace WindowsFormsApp3
         int borderSize = 15;
 
         // Variables Saw //
-        int sawSpeed = 2;
+        int sawSpeed = 5;
         bool deplacement = true;
-        int PositionInitial = 296;
-        int PositionFinal = 447;
+        int PositionInitial = 291;
+        int PositionFinal = 503;
         int PositionActuel;
 
         Label deathLabel;
@@ -35,9 +35,9 @@ namespace WindowsFormsApp3
             InitializeComponent();
             canJump = true;
             this.DoubleBuffered = true;
+            this.KeyDown += Form_KeyDown;
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
-            this.KeyDown += Form2_KeyDown;
             PositionActuel = PositionInitial;
             txtScore.Text = "Score : " + GameData.Score.ToString();
         }
@@ -140,7 +140,7 @@ namespace WindowsFormsApp3
             /* Mouvement saw */
             foreach (Control control in Controls)
             {
-                if (control is PictureBox && control.Tag is string tag && tag == "saw")
+                if (control is PictureBox && control.Tag is string tag && tag == "rockhead")
                 {
                     if (deplacement)
                     {
@@ -165,7 +165,7 @@ namespace WindowsFormsApp3
             }
             foreach (Control control in Controls)
             {
-                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "saw")
+                if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "rockhead")
                 {
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
@@ -233,9 +233,9 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         GameTimer.Stop();
-                        Fin fin = new Fin();
+                        Form4 form4 = new Form4();
                         this.Hide();
-                        fin.Show();
+                        form4.Show();
                     }
                 }
             }
@@ -295,9 +295,10 @@ namespace WindowsFormsApp3
             deathLabel.Visible = false;
             deathLabel2.Visible = false;
 
+            GameData.Mort++;
         }
 
-        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
