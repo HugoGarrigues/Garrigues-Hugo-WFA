@@ -13,13 +13,16 @@ namespace WindowsFormsApp3
 {
     public partial class Form4 : Form
     {
+        // Variables Personnages //
         bool goLeft, goRight, jumping, canJump;
         int jumpSpeed;
         int playerSpeed = 6;
-
         bool isPlayerDead = false;
 
+        // Variables Autres
         int borderSize = 15;
+        Label deathLabel;
+        Label deathLabel2;
 
         // Variables Rock X //
         int rockspeedX = 5;
@@ -44,11 +47,6 @@ namespace WindowsFormsApp3
         int PositionActuelSaw;
 
 
-        int PositionInitial = 314;
-        bool playerOnSpecialPlatform = false;
-
-        Label deathLabel;
-        Label deathLabel2;
         public Form4()
         {
             InitializeComponent();
@@ -64,8 +62,10 @@ namespace WindowsFormsApp3
         }
 
 
+        // Fonction MainTimerEvent //
         private void MainTimerEvent(object sender, EventArgs e)
         {
+            // Conditions permettant de gérer les collisions avec les bordures du jeu ( Marge de 15 pixels ajouter pour correspondre a l'esthétique ) //
             if (player.Left < borderSize)
             {
                 player.Left = borderSize;
@@ -78,8 +78,7 @@ namespace WindowsFormsApp3
             {
                 player.Top = borderSize;
             }
-
-
+            // Conditions si le personnage saute qui sert a décrementer la jumpspeed pendant le saut et une fois la distance du saut atteint passe la valeur du saut a 0 pour le faire tomber //
             if (jumping)
             {
                 player.Top -= jumpSpeed;
@@ -89,6 +88,7 @@ namespace WindowsFormsApp3
                     jumping = false;
                 }
             }
+            // Conditions su le personnage n'est pas en train de sauter et donc lui accorder un nouveau saut / baisse le player pour faire qu'il retombe plus lentement ( système de gravité )  // 
             else
             {
                 if (player.Top + player.Height < this.ClientSize.Height)
@@ -100,6 +100,7 @@ namespace WindowsFormsApp3
                     canJump = true;
                 }
             }
+            // Gestions des mouvements gauche et droite en fonction de la vitesse de déplacement ( playerspeed )//
             if (goLeft && player.Left > 0)
             {
                 player.Left -= playerSpeed;
@@ -109,7 +110,7 @@ namespace WindowsFormsApp3
                 player.Left += playerSpeed;
             }
 
-            /* quand il passe sur un spiketrap ca tp le player */
+            /* Boucle qui fait en sorte que les spike trap tue le player quand il rentre en contact avec */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "spiketrap")
@@ -123,7 +124,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* recupere apple et incremente score */
+            /* Boucle qui gere l'implémentation du score en fonction de la pomme récupéré */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "apple")
@@ -136,7 +137,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Collision du haut de la platform */
+            /* Boucle qui gere les collisions entre le player et la plateforme */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "platform")
@@ -159,7 +160,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Mouvement Rockhead */
+            /* Boucle qui gere les mouvement de la rockhead a l'horizontal */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag is string tag && tag == "rockheadRight")
@@ -185,6 +186,7 @@ namespace WindowsFormsApp3
                     control.Left = PositionActuelX;
                 }
             }
+            // Boucle qui gere la mort du player en fonction de sa collision avec la rockhead //
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "rockheadRight")
@@ -198,7 +200,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-
+            /* Boucle qui gere les mouvement de la rockhead a la vertical */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag is string tag && tag == "rockheadbottom")
@@ -224,6 +226,7 @@ namespace WindowsFormsApp3
                     control.Top = PositionActuelY;
                 }
             }
+            // Boucle qui gere la mort du player en fonction de sa collision avec la rockhead //
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "rockheadbottom")
@@ -238,6 +241,7 @@ namespace WindowsFormsApp3
                 }
             }
 
+            // Boucle qui gere la Grass et qui place le joueur dessus si il rentre en contact avec par le dessus et le fait tomber sur les cotés //
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "grass")
@@ -259,6 +263,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
+            // Boucle qui augmente la valeur du saut du player si il se situe sur un trampoline // 
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "trampoline")
@@ -271,7 +276,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-
+            // Boucle qui quand le joueur rentre en contact avec la porte ferme le form actuel et l'amene sur le form de fin // 
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "door")
@@ -285,6 +290,7 @@ namespace WindowsFormsApp3
                     }
                 }
             }
+            /* Boucle qui gere les mouvement de la saw a l'horizontal */
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag is string tag && tag == "saw")
@@ -310,6 +316,7 @@ namespace WindowsFormsApp3
                     control.Left = PositionActuelSaw;
                 }
             }
+            // Boucle qui gere la mort du player en fonction de sa collision avec la saw //
             foreach (Control control in Controls)
             {
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "saw")
@@ -325,7 +332,7 @@ namespace WindowsFormsApp3
             }
 
         }
-
+        // Fonction qui est apellé quand l'utilisateur appuie sur une touche // 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (!isPlayerDead)
@@ -354,7 +361,7 @@ namespace WindowsFormsApp3
                 this.Close();
             }
         }
-
+        // Fonction qui est apellé quand l'utilisateur relache une touche // 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -366,6 +373,7 @@ namespace WindowsFormsApp3
                 goRight = false;
             }
         }
+        // Fonction Respawn permettant au personnage quand il meurt de le faire réapparaitre //
         private void Respawn()
         {
             player.Location = new Point(16, 27);
@@ -382,7 +390,7 @@ namespace WindowsFormsApp3
 
             GameData.Mort++;
         }
-
+        // Fonction permettant de fermer le form a l'aide de la touche Echap // 
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
