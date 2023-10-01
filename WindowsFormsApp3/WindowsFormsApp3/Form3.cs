@@ -233,9 +233,9 @@ namespace WindowsFormsApp3
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         GameTimer.Stop();
-                        Form3 form3 = new Form3();
+                        Fin fin = new Fin();
                         this.Hide();
-                        form3.Show();
+                        fin.Show();
                     }
                 }
             }

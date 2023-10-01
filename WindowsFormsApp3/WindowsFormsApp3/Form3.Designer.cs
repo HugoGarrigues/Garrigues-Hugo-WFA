@@ -39,12 +39,14 @@
             this.labelMort2 = new System.Windows.Forms.Label();
             this.labelMort = new System.Windows.Forms.Label();
             this.txtScore = new System.Windows.Forms.Label();
+            this.door = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.border2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.border)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             this.SuspendLayout();
             // 
             // border2
@@ -155,12 +157,25 @@
             this.txtScore.Tag = "txtScore";
             this.txtScore.Text = "Score : 0";
             // 
+            // door
+            // 
+            this.door.BackColor = System.Drawing.Color.Transparent;
+            this.door.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.door;
+            this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.door.Location = new System.Drawing.Point(99, 268);
+            this.door.Name = "door";
+            this.door.Size = new System.Drawing.Size(58, 58);
+            this.door.TabIndex = 151;
+            this.door.TabStop = false;
+            this.door.Tag = "door";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.gray_background;
             this.ClientSize = new System.Drawing.Size(558, 357);
+            this.Controls.Add(this.door);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.labelMort2);
             this.Controls.Add(this.labelMort);
@@ -181,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +214,6 @@
         private System.Windows.Forms.Label labelMort2;
         private System.Windows.Forms.Label labelMort;
         private System.Windows.Forms.Label txtScore;
+        private System.Windows.Forms.PictureBox door;
     }
 }
