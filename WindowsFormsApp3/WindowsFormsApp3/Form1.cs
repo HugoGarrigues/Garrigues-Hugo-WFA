@@ -222,28 +222,35 @@ namespace WindowsFormsApp3
                 }
             }
 
-
+            /* Boucle permettant de parcourir tous les controls avec comme tag "floor" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "floor")
                 {
+                    // Converti la pictureBox de sorte a pouvoir l'utiliser //
                     PictureBox floor = (PictureBox)control;
-
+                    // Vérifie l' intersection entre joueur et le floor // 
                     if (player.Bounds.IntersectsWith(floor.Bounds))
                     {
+                        // Place le joueur au dessus du floor //
                         player.Top = floor.Top - player.Height;
+                        // Rénitialise le saut du player //
                         jumpSpeed = 0;
                         canJump = true;
                     }
                 }
             }
-
+            /* Boucle permettant de parcourir tous les controls avec comme tag "door" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "door")
                 {
+                    // Vérifie l' intersection entre joueur et la door // 
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
+                        // Arrete le gametimer et cache le form actuel pour dévoiler le suivant // 
                         GameTimer.Stop();
                         Form2 form2 = new Form2();
                         this.Hide();
@@ -252,7 +259,6 @@ namespace WindowsFormsApp3
                 }
             }
         }
-
 
         // Fonction qui est apellé quand l'utilisateur appuie sur une touche // 
         private void KeyIsDown(object sender, KeyEventArgs e)
