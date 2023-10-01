@@ -84,6 +84,16 @@ namespace WindowsFormsApp3
                 }
             }
 
+            // Gestions des mouvements gauche et droite en fonction de la vitesse de déplacement ( playerspeed )//
+            if (goLeft && player.Left > 0)
+            {
+                player.Left -= playerSpeed;
+            }
+            if (goRight && player.Right < this.ClientSize.Width)
+            {
+                player.Left += playerSpeed;
+            }
+
             /* Boucle permettant de parcourir tous les controls avec comme tag "spiketrap" */
             foreach (Control control in Controls)
             {
