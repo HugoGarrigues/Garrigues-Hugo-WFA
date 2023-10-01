@@ -114,7 +114,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 161);
+            this.pictureBox8.Location = new System.Drawing.Point(11, 188);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(48, 16);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -125,7 +125,7 @@
             // pictureBox45
             // 
             this.pictureBox45.Image = global::WindowsFormsApp3.Properties.Resources.horizontal_long_block;
-            this.pictureBox45.Location = new System.Drawing.Point(61, 161);
+            this.pictureBox45.Location = new System.Drawing.Point(59, 188);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(48, 16);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -138,7 +138,7 @@
             this.door.BackColor = System.Drawing.Color.Transparent;
             this.door.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.door;
             this.door.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.door.Location = new System.Drawing.Point(14, 104);
+            this.door.Location = new System.Drawing.Point(12, 131);
             this.door.Name = "door";
             this.door.Size = new System.Drawing.Size(58, 58);
             this.door.TabIndex = 160;
@@ -305,7 +305,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::WindowsFormsApp3.Properties.Resources.Apple;
-            this.pictureBox3.Location = new System.Drawing.Point(299, 224);
+            this.pictureBox3.Location = new System.Drawing.Point(312, 224);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +330,7 @@
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.skull;
-            this.pictureBox13.Location = new System.Drawing.Point(299, 269);
+            this.pictureBox13.Location = new System.Drawing.Point(312, 269);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(27, 33);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

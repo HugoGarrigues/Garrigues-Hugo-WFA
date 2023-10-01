@@ -41,6 +41,7 @@ namespace WindowsFormsApp3
             this.KeyDown += Form_KeyDown;
             GameData.Score = 0;
             GameData.Mort = 0;
+            PositionActuel = PositionInitial;
         }
 
         public static class GameData
