@@ -73,6 +73,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _return {
+            get {
+                object obj = ResourceManager.GetObject("return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apple {
             get {
                 object obj = ResourceManager.GetObject("Apple", resourceCulture);
@@ -246,6 +256,16 @@ namespace WindowsFormsApp3.Properties {
         internal static System.Drawing.Bitmap Jump__32x32_ {
             get {
                 object obj = ResourceManager.GetObject("Jump (32x32)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_button {
+            get {
+                object obj = ResourceManager.GetObject("menu button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

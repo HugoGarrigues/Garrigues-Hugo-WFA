@@ -10,25 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Menu : Form
+    public partial class Info : Form
     {
-        public Menu()
+        public Info()
         {
             InitializeComponent();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Menu menu = new Menu();
             this.Hide();
-            form1.Show();
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            Info info = new Info();
-            this.Hide();
-            info.Show();
+            menu.Show();
         }
     }
 }
