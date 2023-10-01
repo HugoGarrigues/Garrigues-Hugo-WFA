@@ -36,22 +36,30 @@ namespace WindowsFormsApp3
             InitializeComponent();
             canJump = true;
             this.DoubleBuffered = true;
+            // Récuperation des labels de mort //
             deathLabel = labelMort;
             deathLabel2 = labelMort2;
+            // Initialisation de la fonction pour fermer le formulaire
             this.KeyDown += Form_KeyDown;
+            // Initialisation à 0 des variables Mort et Score //
             GameData.Score = 0;
             GameData.Mort = 0;
             PositionActuel = PositionInitial;
         }
-
+        
+        // Initialisation des variables static du Score et des Morts //
         public static class GameData
-{
-    public static int Score { get; set; } = 0;
+        {
+            public static int Score { get; set; } = 0;
             public static int Mort { get; set; } = 0;
-}
+        }
 
+
+        // Fonction MainTimerEvent // 
         private void MainTimerEvent(object sender, EventArgs e)
         {
+
+            // Conditions permettant de gérer les collisions avec les bordures du jeu ( Marge de 15 pixels ajouter pour correspondre a l'esthétique ) //
             if (player.Left < borderSize)
             {
                 player.Left = borderSize;
@@ -65,7 +73,7 @@ namespace WindowsFormsApp3
                 player.Top = borderSize;
             }
 
-
+            // Conditions si le personnage saute qui sert a décrementer la jumpspeed pendant le saut et une fois la distance du saut atteint passe la valeur du saut a 0 pour le faire tomber //
             if (jumping)
             {
                 player.Top -= jumpSpeed;
@@ -75,6 +83,7 @@ namespace WindowsFormsApp3
                     jumping = false;
                 }
             }
+            // Conditions su le personnage n'est pas en train de sauter et donc lui accorder un nouveau saut / baisse le player pour faire qu'il retombe plus lentement ( système de gravité )  // 
             else
             {
                 if (player.Top + player.Height < this.ClientSize.Height)
@@ -86,6 +95,8 @@ namespace WindowsFormsApp3
                     canJump = true;
                 }
             }
+
+            // Gestions des mouvements gauche et droite en fonction de la vitesse de déplacement ( playerspeed )//
             if (goLeft && player.Left > 0)
             {
                 player.Left -= playerSpeed;
@@ -95,11 +106,13 @@ namespace WindowsFormsApp3
                 player.Left += playerSpeed;
             }
 
-            /* quand il passe sur un spiketrap ca tp le player */
+            /* Boucle permettant de parcourir tous les controls avec comme tag "spiketrap" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "spiketrap")
                 {
+                    // Système de mort : Si collision detecté alors fonction respawn appelé et affichage des labels necessaires //
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         GameTimer.Stop();
@@ -109,11 +122,13 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* recupere apple et incremente score */
+            /* Boucle permettant de parcourir tous les controls avec comme tag "APPLE" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "apple")
                 {
+                    // Systeme d'incrementation de point : Si collision detectée alors le control en question est remove et le score est incrementé de 1 // 
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         Controls.Remove(control);
@@ -122,37 +137,51 @@ namespace WindowsFormsApp3
                     }
                 }
             }
-            /* Collision du haut de la platform */
+
+            /* Boucle permettant de parcourir tous les controls avec comme tag "platform" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "platform")
                 {
+                    // Converti la pictureBox de sorte a pouvoir l'utiliser //
                     PictureBox platform = (PictureBox)control;
+                    // Verifie si intersection il y a eu //
                     if (player.Bounds.IntersectsWith(platform.Bounds))
                     {
+                        // Conditions pour le dessus de la platform : Verification si le bas du player est > au haut de la platform //
                         if (player.Bottom > platform.Top && player.Top < platform.Top)
                         {
+                            // Place le player au dessus de la plateforme //
                             player.Top = platform.Top - player.Height;
+                            // Rénitialise le saut du player //
                             jumpSpeed = 0;
                             canJump = true;
                         }
+                        // Conditions pour le dessous de la platform : Verification si le haut du player est < au bas de la platform //
                         else if (player.Top < platform.Bottom && player.Bottom > platform.Bottom)
                         {
+                            // Place le player en dessous de la plateforme //
                             player.Top = platform.Bottom;
+                            // Stop le saut du joueur //
                             jumpSpeed = 0;
                             jumping = false;
                         }
                     }
                 }
             }
-            /* Mouvement rockhead */
+            /* Boucle permettant de parcourir tous les controls avec comme tag "rockhead" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag is string tag && tag == "rockhead")
                 {
+                    // Si la rockhead est en train de descendre // 
                     if (isDescending)
                     {
+                        // Continue de baisser la rockhead, en augmentant la position verticale //
                         PositionActuel += rockheadSpeed;
+                        // Verifie si la position final est atteinte pour arreter le mouvement et le faire partir dans l'autre mouvement// 
                         if (PositionActuel >= PositionFinal)
                         {
                             PositionActuel = PositionFinal;
@@ -160,21 +189,29 @@ namespace WindowsFormsApp3
                         }
                     }
                     else
+                    // Si est en train de monter // 
                     {
+                        // Continue de monter la rockhead, en baissant la position verticale // 
                         PositionActuel -= rockheadSpeed;
+                        // Verifie si la position final est atteinte pour arreter le mouvement et le faire partir dans l'autre mouvement// 
                         if (PositionActuel <= PositionInitial)
                         {
                             PositionActuel = PositionInitial;
                             isDescending = true;
                         }
                     }
+                    // Actualise la proprieté top de la rockHead a l'aide de la nouvelle position //
                     control.Top = PositionActuel;
                 }
             }
+
+            /* Boucle permettant de parcourir tous les controls avec comme tag "rockhead" */
             foreach (Control control in Controls)
             {
+                // Vérification du tag de la picture box // 
                 if (control is PictureBox && control.Tag != null && control.Tag.ToString() == "rockhead")
                 {
+                    // Système de mort : Si collision detecté alors fonction respawn appelé et affichage des labels necessaires //
                     if (player.Bounds.IntersectsWith(control.Bounds))
                     {
                         GameTimer.Stop();
@@ -216,6 +253,8 @@ namespace WindowsFormsApp3
             }
         }
 
+
+        // Fonction qui est apellé quand l'utilisateur appuie sur une touche // 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (!isPlayerDead) 
@@ -245,6 +284,7 @@ namespace WindowsFormsApp3
             }
         }
 
+        // Fonction qui est apellé quand l'utilisateur relache une touche // 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -256,6 +296,9 @@ namespace WindowsFormsApp3
                 goRight = false;
             }
         }
+
+
+        // Fonction Respawn permettant au personnage quand il meurt de le faire réapparaitre //
         private void Respawn()
         {
             player.Location = new Point(20, 319);
@@ -273,6 +316,7 @@ namespace WindowsFormsApp3
             GameData.Mort++;
         }
 
+        // Fonction permettant de fermer le form a l'aide de la touche Echap // 
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)

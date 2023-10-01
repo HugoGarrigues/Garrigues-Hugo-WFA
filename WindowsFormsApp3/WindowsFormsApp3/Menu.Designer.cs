@@ -119,7 +119,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(166, 100);
+            this.label1.Location = new System.Drawing.Point(166, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 46);
             this.label1.TabIndex = 58;
@@ -131,7 +131,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(153, 183);
+            this.label2.Location = new System.Drawing.Point(153, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(247, 46);
             this.label2.TabIndex = 59;
@@ -143,7 +143,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(67)))), ((int)(((byte)(60)))));
-            this.label3.Location = new System.Drawing.Point(235, 144);
+            this.label3.Location = new System.Drawing.Point(235, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 46);
             this.label3.TabIndex = 60;
@@ -153,7 +153,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::WindowsFormsApp3.Properties.Resources.Stone_Game_Buttons;
-            this.pictureBox3.Location = new System.Drawing.Point(205, 251);
+            this.pictureBox3.Location = new System.Drawing.Point(207, 249);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 57);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +314,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::WindowsFormsApp3.Properties.Resources.menu_button;
-            this.pictureBox13.Location = new System.Drawing.Point(274, 251);
+            this.pictureBox13.Location = new System.Drawing.Point(276, 249);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(52, 57);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
