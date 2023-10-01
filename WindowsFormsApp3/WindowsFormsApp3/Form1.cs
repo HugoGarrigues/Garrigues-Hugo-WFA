@@ -191,7 +191,7 @@ namespace WindowsFormsApp3
                     else
                     // Si est en train de monter // 
                     {
-                        // Continue de monter la rockhead, en baissant la position verticale // 
+                        // Continue de monter la rockhead, en diminuant la position verticale // 
                         PositionActuel -= rockheadSpeed;
                         // Verifie si la position final est atteinte pour arreter le mouvement et le faire partir dans l'autre mouvement// 
                         if (PositionActuel <= PositionInitial)
@@ -307,19 +307,24 @@ namespace WindowsFormsApp3
         // Fonction Respawn permettant au personnage quand il meurt de le faire réapparaitre //
         private void Respawn()
         {
+            // Teleporte le joueur a son endroit de spawn // 
             player.Location = new Point(20, 319);
 
+            // Réniatialise son saut // 
             jumping = false;
             canJump = true;
             jumpSpeed = 0;
 
+            // Redémarre le Jeu //
             GameTimer.Start();
             isPlayerDead = false;
 
             deathLabel.Visible = false;
             deathLabel2.Visible = false;
 
+            // Itere de 1 son nombre de morts 
             GameData.Mort++;
+
         }
 
         // Fonction permettant de fermer le form a l'aide de la touche Echap // 
